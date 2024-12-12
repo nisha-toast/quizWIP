@@ -1,1 +1,64 @@
+<!-- Ground Rules Page -->
+<div id="groundRules">
+    <h1>Welcome to the DAINAMA Quiz!</h1>
+    <h1>Which DAINAMA panel are you?</h1>
+    <p>Please read the following rules <3:</p>
+    <ul>
+        <li>Answer all questions honestly!</li>
+        <li>Click the "Start Quiz" button to begin.</li>
+        <li>Each question has multiple choices. Click your answer to proceed to the next question.</li>
+        <li>You have to know you're the BEST to do this quiz. If not, click "I'm not good enough"</li>
+    </ul>
+    <button id="startQuizBtn">Start Quiz</button>
+    <button id="notGoodEnoughBtn">I'm not good enough</button> <!-- Button for uplifting page -->
+</div>
 
+<!-- Encouragement Page (Initially Hidden) -->
+<div id="encouragementPage" style="display: none;">
+    <h1>You Can Do This!</h1>
+    <p>Don't doubt yourself!</p>
+    <p>What would Great Explosion Murder God Dynamight SAY??? 'LET's GO EXTRAS.'</p>
+    <button id="startQuizFromEncouragement">Start Quiz Now</button>
+</div>
+
+
+<!-- Quiz Page -->
+    <div id="quizPage" style="display: none;">
+        <!-- Question 1 -->
+        <div id="question1">
+            <h2>Question 1: Pick an activity:</h2>
+            <button id="q1a">Eating (A)</button>
+            <button id="q1b">Studying (B)</button>
+            <button id="q1c">Painting (C)</button>
+            <button id="nextBtn1" style="display: none;">Next Question</button>
+        </div>
+
+        <!-- Question 2 -->
+        <div id="question2" style="display: none;">
+            <h2>Question 2: What do you value most?</h2>
+            <button id="q2a">Food (A)</button>
+            <button id="q2b">Winning (B)</button>
+            <button id="q2c">Friends (C)</button>
+            <button id="nextBtn2" style="display: none;">Next Question</button>
+        </div>
+
+        <!-- Question 3 -->
+        <div id="question3" style="display: none;">
+            <h2>Question 3: Pick a job.</h2>
+            <button id="q3a">HERO!!!! (A)</button>
+            <button id="q3b">Model~ (B)</button>
+            <button id="q3c">Artist! (C)</button>
+        </div>
+    </div>
+
+    <!-- Result Page -->
+    <div id="result" style="display: none;">
+        <h2>Your Result:</h2>
+        <div id="resultText"></div>
+        <div id="resultImageContainer"></div>
+        <button id="restartQuizBtn">Restart Quiz</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
