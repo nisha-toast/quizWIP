@@ -92,7 +92,7 @@ function calculateResult() {
 			break;
 		case 'ACC':
 			resultImage = 'GFyo3fQa4AAfUlk.jpeg';
-			resultMessage = "WITH this will you'll do anything :)";
+			resultMessage = "WITH this will you'll do anything";
 			break;
 
 
