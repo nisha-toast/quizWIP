@@ -10,7 +10,7 @@ document.getElementById('startQuizBtn').addEventListener('click', () => {
 });
 
 // Go to the quiz page when the user clicks "Start the Quiz"
-document.getElementById('startQuizFromEncouragement').addEventListener('click', () => {
+document.getElementById('startQuizButton').addEventListener('click', () => {
 	document.getElementById('upliftingPage').style.display = 'none';
 	document.getElementById('quizPage').style.display = 'block';
 	showQuestion(1);
