@@ -11,16 +11,16 @@ document.getElementById('startQuizBtn').addEventListener('click', () => {
 
 // Go to the quiz page when the user clicks "Start the Quiz"
 document.getElementById('startQuizBtn').addEventListener('click', () => {
-	document.getElementById('upliftingPage').style.display = 'none';
+	document.getElementById('encouragementPage').style.display = 'none';
 	document.getElementById('quizPage').style.display = 'block';
 	showQuestion(1);
 });
 
 // Show a question
 function showQuestion(questionNumber) {
-	document.getElementById(`question${questionNumber}`).style.display = 'block';
+	document.getElementById(`question${question}`).style.display = 'block';
 	if (questionNumber > 1) {
-		document.getElementById(`question${questionNumber - 1}`).style.display = 'none';
+		document.getElementById(`question${question - 1}`).style.display = 'none';
 	}
 	if (questionNumber === 3) {
 		document.getElementById('nextButton').style.display = 'none';
