@@ -3,12 +3,6 @@ let answer1 = "";
 let answer2 = "";
 let answer3 = "";
 
-// Show the encourgagement page
-document.getElementById('notGoodEnoughBtn').addEventListener('click', () => {
-	document.getElementById('encouragementPage').style.display = 'none';
-	document.getElementById('encouragementPage').style.display = 'block';
-});
-
 // Go to the quiz page when the user clicks "Start the Quiz"
 document.getElementById('startQuizBtn').addEventListener('click', () => {
 	document.getElementById('quizPage').style.display = 'none';
@@ -42,12 +36,21 @@ document.getElementById("q3c").addEventListener("click", () => { answer3 = 'C'; 
 
 // Proceed to the next question
 function goToNextQuestion(nextQuestion) {
+	showQuestion(nextQuestion);
 	document.getElementById(`question${nextQuestion - 1}`).style.display = 'none';
 	document.getElementById(`question${nextQuestion}`).style.display = 'block';
 	if (nextQuestion === 3) {
 		document.getElementById('nextBtn3').style.display = 'none';
 	}
 }
+
+ function showQuestion(questionNumber) {
+            const questions = document.querySelectorAll('.question');
+            // Hide all questions
+            questions.forEach(question => question.style.display = 'none');
+            // Show the current question
+            document.getElementById(`question${questionNumber}`).style.display = 'block';
+        }
 
 // Calculate result based on answers
 function calculateResult() {
