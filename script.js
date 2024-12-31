@@ -166,7 +166,7 @@ function calculateResult() {
 			resultMessage = "im tired have a bakugou";
 			break;
 		case 'CCC':
-			resultImage = 'umblr_l_755273888979314.jpg';
+			resultImage = 'Tumblr_l_755273888979314.jpg';
 			resultMessage = "get coffee";
 			break;
 
