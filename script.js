@@ -3,6 +3,19 @@ let answer1 = "";
 let answer2 = "";
 let answer3 = "";
 
+// // Go to the quiz page when the user clicks "Start the Quiz"
+// document.getElementById('startQuizBtn').addEventListener('click', () => {
+//     // Hide the ground rules and show the quiz page
+//     document.getElementById('groundRules').style.display = 'none';
+//     document.getElementById('quizPage').style.display = 'block';
+    
+//     // Hide the "Start Quiz" button after starting the quiz
+//     document.getElementById('startQuizBtn').style.display = 'none';
+    
+//     // Show the first question
+//     showQuestion(1);
+// });
+
 // Go to the quiz page when the user clicks "Start the Quiz"
 document.getElementById('startQuizBtn').addEventListener('click', () => {
     // Hide the ground rules and show the quiz page
@@ -11,6 +24,10 @@ document.getElementById('startQuizBtn').addEventListener('click', () => {
     
     // Hide the "Start Quiz" button after starting the quiz
     document.getElementById('startQuizBtn').style.display = 'none';
+    
+    // Reset answers and hide all questions
+    answer1 = answer2 = answer3 = '';
+    hideAllQuestions();
     
     // Show the first question
     showQuestion(1);
@@ -46,6 +63,12 @@ function goToNextQuestion(nextQuestion) {
             // Show the current question
             document.getElementById(`question${questionNumber}`).style.display = 'block';
         }
+
+// Hide all questions
+function hideAllQuestions() {
+    const questions = document.querySelectorAll('.question');
+    questions.forEach(question => question.style.display = 'none');
+}
 
 // Calculate result based on answers
 function calculateResult() {
