@@ -1,54 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAINAMA Quiz</title>
+    <!-- Link to the external CSS file -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
 <!-- Ground Rules Page -->
-<div id="groundRules">
+<div id="groundRules" class="container text-center">
     <h1>Welcome to the DAINAMA Quiz!</h1>
-    <h1>Which DAINAMA panel are you?</h1>
+    <h2>Which DAINAMA panel are you?</h2>
     <p>Please read the following rules <3:</p>
-    <ul>
-        <li>Answer all questions honestly!</li>
-        <li>Click the "Start Quiz" button to begin.</li>
-        <li>Each question has multiple choices. Click your answer to proceed to the next question.</li>
-        <li>You have to know you're the BEST to do this quiz. If not, click "I'm not good enough"</li>
+    <ul class="list-group">
+        <li class="list-group-item">Answer all questions honestly!</li>
+        <li class="list-group-item">Click the "Start Quiz" button to begin.</li>
+        <li class="list-group-item">Each question has multiple choices. Click your answer to proceed to the next question.</li>
     </ul>
-    <button id="startQuizBtn">Start Quiz</button>
+    <button id="startQuizBtn" class="btn btn-primary mt-3">Start Quiz</button>
 </div>
 
-
 <!-- Quiz Page -->
-    <div id="quizPage" style="display: none;">
-        <!-- Question 1 -->
-        <div id="question1">
-            <h2>Question 1: Pick an activity:</h2>
-            <button id="q1a">Eating (A)</button>
-            <button id="q1b">Studying (B)</button>
-            <button id="q1c">Painting (C)</button>
-            <button id="nextBtn1" style="display: none;">Next Question</button>
-        </div>
-
-        <!-- Question 2 -->
-        <div id="question2" style="display: none;">
-            <h2>Question 2: What do you value most?</h2>
-            <button id="q2a">Food (A)</button>
-            <button id="q2b">Winning (B)</button>
-            <button id="q2c">Friends (C)</button>
-            <button id="nextBtn2" style="display: none;">Next Question</button>
-        </div>
-
-        <!-- Question 3 -->
-        <div id="question3" style="display: none;">
-            <h2>Question 3: Pick a job.</h2>
-            <button id="q3a">HERO!!!! (A)</button>
-            <button id="q3b">Model~ (B)</button>
-            <button id="q3c">Artist! (C)</button>
-        </div>
+<div id="quizPage" class="container" style="display: none;">
+    <!-- Question 1 -->
+    <div id="question1" class="mt-4">
+        <h3>Question 1: Pick an activity:</h3>
+        <button id="q1a" class="btn btn-info btn-lg">Eating (A)</button>
+        <button id="q1b" class="btn btn-info btn-lg">Studying (B)</button>
+        <button id="q1c" class="btn btn-info btn-lg">Painting (C)</button>
+        <button id="nextBtn1" class="btn btn-success mt-3" style="display: none;">Next Question</button>
     </div>
 
-    <!-- Result Page -->
-    <div id="result" style="display: none;">
-        <h2>Your Result:</h2>
-        <div id="resultText"></div>
-        <div id="resultImageContainer"></div>
-        <button id="restartQuizBtn">Restart Quiz</button>
+    <!-- Question 2 -->
+    <div id="question2" class="mt-4" style="display: none;">
+        <h3>Question 2: What do you value most?</h3>
+        <button id="q2a" class="btn btn-info btn-lg">Food (A)</button>
+        <button id="q2b" class="btn btn-info btn-lg">Winning (B)</button>
+        <button id="q2c" class="btn btn-info btn-lg">Friends (C)</button>
+        <button id="nextBtn2" class="btn btn-success mt-3" style="display: none;">Next Question</button>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Question 3 -->
+    <div id="question3" class="mt-4" style="display: none;">
+        <h3>Question 3: Pick a job.</h3>
+        <button id="q3a" class="btn btn-info btn-lg">HERO!!!! (A)</button>
+        <button id="q3b" class="btn btn-info btn-lg">Model~ (B)</button>
+        <button id="q3c" class="btn btn-info btn-lg">Artist! (C)</button>
+    </div>
+</div>
+
+<!-- Result Page -->
+<div id="result" class="container" style="display: none;">
+    <h2>Your Result:</h2>
+    <div id="resultText" class="mt-3"></div>
+    <div id="resultImageContainer" class="mt-3"></div>
+    <button id="restartQuizBtn" class="btn btn-danger mt-4">Restart Quiz</button>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Link to external JavaScript file -->
+<script src="script.js"></script>
+
 </body>
 </html>
