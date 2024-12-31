@@ -1,4 +1,21 @@
 /* General styling */
+/* Make all images in the container fit the same size */
+img {
+    width: 100%;               /* Make images fill their container */
+    max-width: 300px;          /* Set a max width for images */
+    height: auto;              /* Maintain aspect ratio */
+    object-fit: cover;         /* Ensure the image covers the container */
+    display: block;            /* Remove any space below the image */
+    margin: 0 auto;            /* Center the image */
+}
+
+/* Optionally, set fixed height with width auto for images */
+img.fixed-size {
+    width: 200px;              /* Fixed width */
+    height: 200px;             /* Fixed height */
+    object-fit: cover;         /* Ensure the image scales correctly */
+}
+
 body {
     background-color: #f0f8ff; /* Light blue background for the whole page */
     font-family: 'Arial', sans-serif;
