@@ -16,16 +16,16 @@ document.getElementById('startQuizBtn').addEventListener('click', () => {
     showQuestion(1);
 });
 
-// Show a question
-function showQuestion(questionNumber) {
-    document.getElementById(`question${questionNumber}`).style.display = 'block';
-    if (questionNumber > 1) {
-        document.getElementById(`question${questionNumber - 1}`).style.display = 'none';
-    }
-    if (questionNumber === 3) {
-        document.getElementById('nextBtn3').style.display = 'none';
-    }
-}
+// // Show a question
+// function showQuestion(questionNumber) {
+//     document.getElementById(`question${questionNumber}`).style.display = 'block';
+//     if (questionNumber > 1) {
+//         document.getElementById(`question${questionNumber - 1}`).style.display = 'none';
+//     }
+//     if (questionNumber === 3) {
+//         document.getElementById('nextBtn3').style.display = 'none';
+//     }
+// }
 
 
 // Handle answers for each question
@@ -51,13 +51,7 @@ function goToNextQuestion(nextQuestion) {
 	}
 }
 
- // function showQuestion(questionNumber) {
- //            const questions = document.querySelectorAll('.question');
- //            // Hide all questions
- //            questions.forEach(question => question.style.display = 'none');
- //            // Show the current question
- //            document.getElementById(`question${questionNumber}`).style.display = 'block';
- //        }
+
 
 // Calculate result based on answers
 function calculateResult() {
@@ -198,17 +192,42 @@ function calculateResult() {
     document.getElementById('result').style.display = 'block';
 }
 
-
 // Restart the quiz when the button is clicked
 document.getElementById('restartQuizBtn').addEventListener('click', () => {
-    // Show the ground rules and start the quiz again
-    document.getElementById('groundRules').style.display = 'block';
-    document.getElementById('quizPage').style.display = 'none';
+    // Reset all answers
+    answer1 = '';
+    answer2 = '';
+    answer3 = '';
+
+    // Hide the result page and show the ground rules page again
     document.getElementById('result').style.display = 'none';
+    document.getElementById('groundRules').style.display = 'block';
 
-    // Show the "Start Quiz" button again
-    document.getElementById('startQuizBtn').style.display = 'block';
-
-    // Reset the answers
-    answer1 = answer2 = answer3 = '';
+    // Reset the quiz page
+    document.getElementById('quizPage').style.display = 'none';
+    
+    // Hide all questions and show the first question again
+    const questions = document.querySelectorAll('.question');
+    questions.forEach(question => question.style.display = 'none');
+    showQuestion(1);
 });
+
+// Function to show the question
+function showQuestion(questionNumber) {
+    // Hide all questions first
+    const questions = document.querySelectorAll('.question');
+    questions.forEach(question => question.style.display = 'none');
+    
+    // Show the current question
+    document.getElementById(`question${questionNumber}`).style.display = 'block';
+    
+    // Hide the 'Next Question' button for the previous question
+    if (questionNumber > 1) {
+        document.getElementById(`nextBtn${questionNumber - 1}`).style.display = 'none';
+    }
+    
+    // Show the 'Next Question' button for the current question
+    if (questionNumber < 3) {
+        document.getElementById(`nextBtn${questionNumber}`).style.display = 'inline-block';
+    }
+}
