@@ -176,7 +176,7 @@ function calculateResult() {
 			break;
 	}
 
-	resultImageContainer.innerHTML = `<img src="assets/${resultImage}" alt="Result Image">`;
+	resultImageContainer.innerHTML = `<img src="assets/images/${resultImage}" alt="Result Image">`;
 	resultText.textContent = resultMessage;
 
 	// Show result page
