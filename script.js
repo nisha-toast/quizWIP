@@ -183,8 +183,6 @@ function calculateResult() {
 	document.getElementById('quizPage').style.display = 'none';
 	document.getElementById('result').style.display = 'block';
 
-	document.getElementById('resultImage').src = resultImage;
-    document.getElementById('resultImage').style.display = 'block'; // Ensure image is displayed
 
     // Show the result page
     document.getElementById('result').style.display = 'block';
