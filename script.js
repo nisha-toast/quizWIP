@@ -197,16 +197,37 @@ function calculateResult() {
 			break;
 	}
 
-	resultImageContainer.innerHTML = `<img src="assets/images/${resultImage}" alt="Result Image">`;
-	resultText.textContent = resultMessage;
+	// resultImageContainer.innerHTML = `<img src="assets/images/${resultImage}" alt="Result Image">`;
+	// resultText.textContent = resultMessage;
 
-	// Show result page
-	document.getElementById('quizPage').style.display = 'none';
-	document.getElementById('result').style.display = 'block';
+	// // Show result page
+	// document.getElementById('quizPage').style.display = 'none';
+	// document.getElementById('result').style.display = 'block';
 
 
-    // Show the result page
+ //    // Show the result page
+ //    document.getElementById('result').style.display = 'block';
+	// Set the result image and message
+    setResultImage(resultImage);  // Calls the new setResultImage function
+    resultText.textContent = resultMessage;
+
+    // Show result page
+    document.getElementById('quizPage').style.display = 'none';
     document.getElementById('result').style.display = 'block';
+}
+
+// Set the result image dynamically
+function setResultImage(resultImage) {
+    const resultImageContainer = document.getElementById('resultImageContainer');
+    resultImageContainer.innerHTML = ''; // Clear the previous image before adding a new one
+    
+    // Create an img element
+    const imgElement = document.createElement('img');
+    imgElement.src = `assets/images/${resultImage}`;
+    imgElement.alt = 'Result Image';
+    
+    // Append the image to the container
+    resultImageContainer.appendChild(imgElement);
 }
 
 
