@@ -3,11 +3,11 @@ let answer1 = "";
 let answer2 = "";
 let answer3 = "";
 
-// Show the uplifting page after the Ground Rules page
-document.getElementById('startQuizBtn').addEventListener('click', () => {
-	document.getElementById('groundRules').style.display = 'none';
-	document.getElementById('upliftingPage').style.display = 'block';
-});
+// // Show the uplifting page after the Ground Rules page
+// document.getElementById('startQuizBtn').addEventListener('click', () => {
+// 	document.getElementById('groundRules').style.display = 'none';
+// 	document.getElementById('upliftingPage').style.display = 'block';
+// });
 
 // Go to the quiz page when the user clicks "Start the Quiz"
 document.getElementById('startQuizBtn').addEventListener('click', () => {
