@@ -5,10 +5,14 @@ let answer3 = "";
 
 // Go to the quiz page when the user clicks "Start the Quiz"
 document.getElementById('startQuizBtn').addEventListener('click', () => {
-	document.getElementById('quizPage').style.display = 'none';
-	document.getElementById('quizPage').style.display = 'block';
-	showQuestion(1);
+    // Hide the ground rules and show the quiz page
+    document.getElementById('groundRules').style.display = 'none';
+    document.getElementById('quizPage').style.display = 'block';
+    
+    // Show the first question
+    showQuestion(1);
 });
+
 
 // Show a question
 function showQuestion(questionNumber) {
