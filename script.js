@@ -199,4 +199,10 @@ document.getElementById('restartQuizBtn').addEventListener('click', () => {
 
     // Reset the answers
     answer1 = answer2 = answer3 = '';
+
+    // Ensure only the "Start Quiz" button and ground rules are visible
+    document.getElementById('startQuizBtn').style.display = 'block';
+
+    // Ensure the first question is displayed after restarting
+    showQuestion(1);
 });
