@@ -92,7 +92,7 @@ function calculateResult() {
 			resultMessage = "Whoops...you need to hang on for your meals!!! Don't give up!";
 			break;
 		case 'AAC':
-			resultImage = 'Tumblr_l_516229372.jpg';
+			resultImage = 'Tumblr_l_516229382419372.jpg';
 			resultMessage = "YEA YOU GOT THIS!!!!!";
 			break;
 		case 'ABA':
