@@ -1,24 +1,24 @@
 /* General styling */
-/* Make all images in the container fit the same size */
-/* Container for result images */
+/* Ensure the container displays images in a row, and they fit properly */
 #resultImageContainer {
-    display: flex;             /* Use flexbox to arrange images in a row */
-    justify-content: center;   /* Center the images horizontally */
-    align-items: center;       /* Align the images vertically */
-    flex-wrap: wrap;           /* Allow the images to wrap if necessary */
-    gap: 10px;                 /* Space between images */
-    margin-top: 1rem;          /* Optional, you can adjust the margin */
+    display: flex;              /* Use flexbox to display images in a row */
+    justify-content: center;    /* Center the images horizontally */
+    align-items: center;        /* Vertically center the images */
+    flex-wrap: wrap;            /* Allow images to wrap to the next line if needed */
+    gap: 10px;                  /* Space between images */
+    margin-top: 1rem;           /* Space between the result text and images */
 }
 
-/* Make images inside the container fit consistently */
+/* Style the images to ensure they have consistent sizes */
 #resultImageContainer img {
-    width: 200px;              /* Set a fixed width */
-    height: 200px;             /* Set a fixed height */
-    object-fit: contain;       /* Ensure the image fits within the container, preserving aspect ratio */
-    border-radius: 8px;        /* Optional, rounded corners for the images */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional, add shadow to images */
-    display: block;            /* Remove space below images */
+    width: 500px;               /* Set the width of each image */
+    height: 450px;              /* Set the height of each image */
+    object-fit: cover;          /* Ensure the image covers the space without distorting */
+    border-radius: 8px;         /* Optional: rounded corners for the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow to images */
+    display: block;             /* Remove any space below images */
 }
+
 
 
 
