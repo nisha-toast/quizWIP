@@ -16,18 +16,6 @@ document.getElementById('startQuizBtn').addEventListener('click', () => {
     showQuestion(1);
 });
 
-// Show a question
-function showQuestion(questionNumber) {
-    document.getElementById(`question${questionNumber}`).style.display = 'block';
-    if (questionNumber > 1) {
-        document.getElementById(`question${questionNumber - 1}`).style.display = 'none';
-    }
-    if (questionNumber === 3) {
-        document.getElementById('nextBtn3').style.display = 'none';
-    }
-}
-
-
 // Handle answers for each question
 document.getElementById("q1a").addEventListener("click", () => { answer1 = 'A'; goToNextQuestion(2); });
 document.getElementById("q1b").addEventListener("click", () => { answer1 = 'B'; goToNextQuestion(2); });
@@ -51,13 +39,13 @@ function goToNextQuestion(nextQuestion) {
 	}
 }
 
- // function showQuestion(questionNumber) {
- //            const questions = document.querySelectorAll('.question');
- //            // Hide all questions
- //            questions.forEach(question => question.style.display = 'none');
- //            // Show the current question
- //            document.getElementById(`question${questionNumber}`).style.display = 'block';
- //        }
+ function showQuestion(questionNumber) {
+            const questions = document.querySelectorAll('.question');
+            // Hide all questions
+            questions.forEach(question => question.style.display = 'none');
+            // Show the current question
+            document.getElementById(`question${questionNumber}`).style.display = 'block';
+        }
 
 // Calculate result based on answers
 function calculateResult() {
