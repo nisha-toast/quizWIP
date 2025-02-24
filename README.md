@@ -1,2 +1,3 @@
 Very Simple Quiz format 
-To try it out please go to: https://nisha-toast.github.io/quizWIP/.
+
+To try this out, please go to: https://nisha-toast.github.io/quizWIP/.
